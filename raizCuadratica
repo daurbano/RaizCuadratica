@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class RaizCuadratica {
+    
+    public static void main(String args[]) {
+      
+      //Scanner entrada = new Scanner(System.in);
+      double a;
+      double b;
+
+      System.out.println("Ingresar primer valor:  ");
+      Scanner entrada = new Scanner(System.in);
+      a = entrada.nextDouble();
+      
+      
+      System.out.println("Ingresar segundo valor:  ");
+      Scanner entrada1 = new Scanner(System.in);
+      b = entrada1.nextDouble();
+
+    }
+    public static double sumar(double a, double b){
+        return a + b;
+    }
+    public static double restar(double a, double b){
+        return a - b;
+    }
+    public static double multiplicar(double a, double b){
+        return a * b;
+    }
+  
