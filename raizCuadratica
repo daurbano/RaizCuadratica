@@ -16,15 +16,33 @@ public class RaizCuadratica {
       System.out.println("Ingresar segundo valor:  ");
       Scanner entrada1 = new Scanner(System.in);
       b = entrada1.nextDouble();
+      
+      double rta = dividir(a, b);
+      System.out.println("Dividir:  "+ rta);
+      
 
     }
-    public static double sumar(double a, double b){
-        return a + b;
+    
+    public static double sumar(double a, double b){return a + b;}
+    public static double restar(double a, double b){return a - b;}
+    public static double multiplicar(double a, double b){return a * b;}
+    
+    public static double dividir(double a, double b){
+        double resul = 0;
+        if(b > 0) { resul = a/b;}
+        return resul;
     }
-    public static double restar(double a, double b){
-        return a - b;
+   
+    public static double raiz(double a){
+        double raiz = 0;
+        if(a >= 0) { raiz = Math.sqrt(a);}
+        return raiz;
     }
-    public static double multiplicar(double a, double b){
-        return a * b;
+   
+    public static double exponencial(double a){
+        return  Math.pow(a,2);
+
     }
-  
+    
+    
+}
