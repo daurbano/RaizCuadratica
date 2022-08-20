@@ -3,29 +3,26 @@ import java.util.Scanner;
 public class RaizCuadratica {
     
     public static void main(String args[]) {
-      
-      //Scanner entrada = new Scanner(System.in);
-      double a;
-      double b;
+        
+      Scanner entrada = new Scanner(System.in);
+      double a, b , c;
 
       System.out.println("Ingresar primer valor:  ");
-      Scanner entrada = new Scanner(System.in);
       a = entrada.nextDouble();
       
-      
       System.out.println("Ingresar segundo valor:  ");
-      Scanner entrada1 = new Scanner(System.in);
-      b = entrada1.nextDouble();
+      b = entrada.nextDouble();
       
-      double rta = dividir(a, b);
-      System.out.println("Dividir:  "+ rta);
+      System.out.println("Ingresar tercer valor:  ");
+      c = entrada.nextDouble();
       
-
+      parteB(a, b, c);
     }
     
     public static double sumar(double a, double b){return a + b;}
     public static double restar(double a, double b){return a - b;}
     public static double multiplicar(double a, double b){return a * b;}
+    public static double exponencial(double y){return  Math.pow(y,2);}
     
     public static double dividir(double a, double b){
         double resul = 0;
@@ -33,16 +30,26 @@ public class RaizCuadratica {
         return resul;
     }
    
-    public static double raiz(double a){
+    public static double raiz(double y){
         double raiz = 0;
-        if(a >= 0) { raiz = Math.sqrt(a);}
+        if(y >= 0) { raiz = Math.sqrt(y);}
         return raiz;
     }
-   
-    public static double exponencial(double a){
-        return  Math.pow(a,2);
-
+    
+    public static double parteA(double a, double b, double c){
+        double rta1, rta2 = 0;
+        rta1 = exponencial(b) - (4*a*c);
+        rta2 = raiz(rta1);
+        return rta2;
     }
     
+    public static void parteB(double a, double b, double c){
+        double rta1, rta2 = 0;
+        rta1 = ((b * (-1)) + (parteA(a, b, c))) / (2 * a);
+        rta2 = ((b * (-1)) - (parteA(a, b, c))) / (2 * a);
+        System.out.println("X1: " + rta1);
+        System.out.println("X2: " + rta2);
+    }
     
 }
+
